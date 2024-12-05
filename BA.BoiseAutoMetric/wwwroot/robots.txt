@@ -1,0 +1,4 @@
+﻿User-agent: *
+Disallow:
+
+sitemap: https://boiseautometric.com/sitemap.xml

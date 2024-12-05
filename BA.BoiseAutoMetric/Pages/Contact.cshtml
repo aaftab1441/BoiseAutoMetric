@@ -1,0 +1,127 @@
+﻿@page "/contact-us"
+@using reCAPTCHA.AspNetCore
+@using reCAPTCHA.AspNetCore.Versions;
+@using Microsoft.Extensions.Options
+@model BA.BoiseAutoMetric.Pages.ContactModel
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+
+
+@section Head {
+    <title>Contact Foreign and Domestic Car Repairs Boise, Idaho - Auto Metric</title>
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <link rel="canonical" href="https://boiseautometric.com/contact-us" />
+    <meta property="og:site_name" content="Auto Metric" />
+    <meta property="og:title" content="Contact Foreign and Domestic Car Repairs Boise, Idaho - Auto Metric" />
+    <meta property="og:url" content="https://boiseautometric.com/contact-us" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="If your vehicle is having any trouble, or you want to schedule some maintenance, feel free to contact us via phone: (208) 338-8483" />
+    <meta property="og:image" content="/images/radiator-replacement.jpg" />
+    <meta property="og:image:width" content="768" />
+    <meta property="og:image:height" content="1024" />
+    <meta itemprop="name" content="Auto Metric" />
+    <meta itemprop="url" content="https://boiseautometric.com/contact-us" />
+    <meta name="description" content="If your vehicle is having any trouble, or you want to schedule some maintenance, feel free to contact us via phone: (208) 338-8483">
+    <meta itemprop="description" content="If your vehicle is having any trouble, or you want to schedule some maintenance, feel free to contact us via phone: (208) 338-8483" />
+    <meta property="business:contact_data:street_address" content="1703 Vista Ave" />
+    <meta property="business:contact_data:locality" content="Boise" />
+    <meta property="business:contact_data:state" content="Idaho" />
+    <meta property="business:contact_data:postal_code" content="83705" />
+    <meta property="business:contact_data:country_name" content="United States" />
+    <meta property="place:location:latitude" content="43.588331" />
+    <meta property="place:location:longitude" content="-116.214" />
+    <meta itemprop="thumbnailUrl" content="/images/radiator-replacement.jpg" />
+    <link rel="image_src" href="/images/radiator-replacement.jpg" />
+    <meta itemprop="image" content="/images/radiator-replacement.jpg" />
+    <meta name="twitter:title" content="Contact Foreign and Domestic Car Repairs Boise, Idaho - Auto Metric" />
+    <meta name="twitter:image" content="/images/radiator-replacement.jpg" />
+    <meta name="twitter:url" content="https://boiseautometric.com/contact-us" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="If your vehicle is having any trouble, or you want to schedule some maintenance, feel free to contact us via phone: (208) 338-8483" />
+}
+@section Schema
+{
+    <script type="application/ld+json">
+        {"@@context":"http://schema.org","@@graph":[{"@@context":"http://schema.org","@@type":"WebSite","url":"https://www.boiseautometrics.com","name":"Auto Metric","contentRating":"G","keywords":"foreign cars, auto repairs, boise, idaho"},{"@@type":"AutoRepair","@@id":"https://www.boiseautometrics.com","name":"Auto Metric","description":"If your vehicle is having any trouble, or you want to schedule some maintenance, feel free to contact us via phone: (208) 338-8483","image":"http://www.boiseautometrics.com/images/radiator-replacement.jpg","url":"https://www.boiseautometrics.com","logo":"https://www.boiseautometrics.com/style/images/auto-metric-logo.png","paymentAccepted":"Cash, Credit Card, Debit Card, Check, Visa, Master Card, Discover, Amex","priceRange":"$$ - $$$$","aggregateRating":{"@@type":"AggregateRating","ratingValue":"5","reviewCount":"20"},"address":[{"@@type":"PostalAddress","streetAddress":"1703 Vista Ave","addressLocality":"Boise","addressRegion":"ID","postalCode":"83705"}],"geo":[{"@@type":"GeoCoordinates","latitude":"43.588331","longitude":"-116.214"}],"telephone":"+​12083388483","openingHours":["Mo-Sa 9:00-17:30"],"hasMap":{"@@type":"Map","url":"https://goo.gl/maps/DrPgG574uKo"},"sameAs":["https://www.facebook.com/Auto-Metric-342222916146867","https://twitter.com/boiseautometric"]},{"@@context":"http://schema.org","@@type":"WebPage","@@id":"https://autometric.com/","name":"Contact Foreign and Domestic Car Repairs Boise, Idaho - Auto Metric","description":"If your vehicle is having any trouble, or you want to schedule some maintenance, feel free to contact us via phone: (208) 338-8483","publisher":{"@@type":"Person","name":"Joe Garza"}}]}
+    </script>
+}
+<main id="content" role="main">
+    <section>
+        <div class="inner">
+            <div class="left">
+                <h1>
+                    Contact Auto Metric
+                </h1>
+                <p>
+                    If your vehicle is having any trouble, or you want to schedule some maintenance, feel free to contact us via phone: (208) 338-8483 or our contact form below.
+                </p>
+                @using (@Html.BeginForm(null, null, FormMethod.Post, new { id = "contact-us", @class = "contact" }))
+                {
+                    @Html.ValidationSummary(true);
+                    <table>
+                        <tr>
+                            <td>
+                                Name:
+                            </td>
+                            <td>
+                                <input asp-for="contactUsModel.Ndkvufdnkfj" type="text" data-val-required="Name is a Required Field" />
+                                <span asp-validation-for="contactUsModel.Ndkvufdnkfj"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email:
+                            </td>
+                            <td>
+                                <input asp-for="contactUsModel.Kfujbmrlfjnt" type="text" data-val-required="Email is a Required Field" />
+                                <span asp-validation-for="contactUsModel.Kfujbmrlfjnt"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Phone:
+                            </td>
+                            <td>
+                                <input asp-for="contactUsModel.jfielxicng" type="text" data-val-required="Phone is a Required Field" />
+                                <span asp-validation-for="contactUsModel.jfielxicng"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                How did you hear about us?
+                            </td>
+                            <td>
+                                <input asp-for="contactUsModel.Jmlvnjrmdx" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Message:
+                            </td>
+                            <td>
+                                <textarea asp-for="contactUsModel.Idmvpmsdhbv"></textarea>
+                                <span asp-validation-for="contactUsModel.Idmvpmsdhbv"></span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>@(Html.Recaptcha<RecaptchaV3HiddenInput>(RecaptchaSettings.Value))</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input id="recaptcha" type="submit" value="Submit">
+                            </td>
+                        </tr>
+                    </table>
+                }
+            </div>
+            <div class="right">
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13746.551016431811!2d-116.22464110223038!3d43.58870799895465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aef871c18b99f5%3A0x83284d2d5fbb3919!2sAuto+Metric+Foreign+Car+Services+Inc.!5e0!3m2!1sen!2sus!4v1482868177432" width="280" height="280" allowfullscreen></iframe>
+                    <a class="directions" href="https://www.google.com/maps/dir/''/autometric+boise/data=!4m5!4m4!1m0!1m2!1m1!1s0x54aef871c18b99f5:0x83284d2d5fbb3919?sa=X&ved=0ahUKEwi4rKaHkpXRAhXhsFQKHQVZDsoQ9RcIczAL">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

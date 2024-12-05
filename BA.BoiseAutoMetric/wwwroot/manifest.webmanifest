@@ -1,0 +1,16 @@
+{
+  "name": "Auto Metric",
+  "description": "Auto Metric is the BEST auto Repair shop in Boise for foriegn and domestic cars.",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

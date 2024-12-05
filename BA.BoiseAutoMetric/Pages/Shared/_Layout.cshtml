@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="msvalidate.01" content="3BF85B2BE3C8990CE90AE62AB011A38A" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91135840-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-91135840-1');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M5RLZNT');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @RenderSection("Head", required: false)
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/site.min.css" />
+    </environment>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    @RenderSection("Schema", required: false)
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5RLZNT"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="header">
+        <div class="inner">
+            <div class="wrapper">
+                <a id="logo" href="/">
+                    <img src="/images/auto-metric-logo.png" alt="Auto Metric - Boise, Idaho Foreign Care Repair and Maintenance">
+                </a>
+                <div id="header-contact">
+                    <div class="left">
+                        <strong>Shop Hours</strong>
+                        <br>
+                        Mon - Friday
+                        <br>
+                        9:00am - 5:30pm
+                    </div>
+                    <div class="right">
+                        <a id="phone" href="tel:12083388483">(208) 338-8483</a>
+                        <br>
+                        Se Habla Espanol
+                        <img src="/images/credit-cards.png" alt="We Accepted Visa, Master Card, Discover, and American Express">
+                    </div>
+                </div>
+                <div id="header-address">
+                    1703 Vista Ave
+                    <br>
+                    Boise, Idaho 83705
+                    <br>
+                    <a href="https://goo.gl/maps/7SntHKCfx5N2" id="directions">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-container">
+        <div class="inner">
+            <div class="wrapper">
+                <div class="menu-button">Menu</div>
+                <nav id="nav-main">
+                    <ul data-breakpoint="900" class="flexnav">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about-us">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/auto-service-boise-id-auto-metric">Auto Repair Services</a>
+                        </li>
+                        <li>
+                            <a href="/vehicle-maintenance-tips">Maintenance</a>
+                        </li>
+                        <li>
+                            <a asp-page="/ForeignCarRepairs">Boise Foreign Car Specialists</a>
+                        </li>
+                        <li>
+                            <a href="/our-reviews">Our Reviews</a>
+                        </li>
+                        <li>
+                            <a href="/contact-us">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <footer id="footer">
+        <div class="inner">
+            <div class="copy">
+                <p>
+                    Copyright 2019 Auto Metric - 1703 Vista Ave Boise, Idaho 83705
+                    <br>
+                    Providing high quality auto repairs and diagnotics at affordable prices. Specializing in Volvo and Volkswagen repairs.
+                </p>
+                <p>
+                    <a href="https://boisewebhosting.com/" rel="noreferrer" target="_blank">Boise Web Hosting</a> | <a href="https://boiseseo.com/" rel="noreferrer" target="_blank">Boise SEO</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

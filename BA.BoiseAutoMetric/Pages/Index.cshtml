@@ -1,0 +1,324 @@
+﻿@page
+@using reCAPTCHA.AspNetCore
+@using reCAPTCHA.AspNetCore.Versions;
+@using Microsoft.Extensions.Options
+@model IndexModel
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+
+@section Head
+{
+<title>The BEST Auto Repair Shop in Boise ID | Auto Metric</title>
+<link rel="shortcut icon" type="image/x-icon" href="" />
+<link rel="canonical" href="https://boiseautometric.com" />
+<meta property="og:site_name" content="Boise Auto Metric" />
+<meta property="og:title" content="The BEST Auto Repair Shop in Boise ID | Auto Metric" />
+<meta property="og:url" content="https://boiseautometric.com" />
+<meta property="og:type" content="website" />
+<meta property="og:description"
+    content="Call Today:(208) 338-8483.  Auto Metric is the BEST auto Repair shop in Boise for foreign and domestic cars.  ASE Certified Mechanics. Great with people too!" />
+<meta property="og:image" content="/images/radiator-replacement.jpg" />
+<meta property="og:image:width" content="768" />
+<meta property="og:image:height" content="1024" />
+<meta itemprop="name" content="Auto Metric" />
+<meta itemprop="url" content="https://boiseautometric.com" />
+<meta name="description"
+    content="Call Today:(208) 338-8483.  Auto Metric is the BEST auto Repair shop in Boise for foreign and domestic cars.  ASE Certified Mechanics. Great with people too!">
+<meta itemprop="description"
+    content="Call Today:(208) 338-8483.  Auto Metric is the BEST auto Repair shop in Boise for foreign and domestic cars.  ASE Certified Mechanics. Great with people too!" />
+<meta property="business:contact_data:street_address" content="1703 Vista Ave" />
+<meta property="business:contact_data:locality" content="Boise" />
+<meta property="business:contact_data:state" content="Idaho" />
+<meta property="business:contact_data:postal_code" content="83705" />
+<meta property="business:contact_data:country_name" content="United States" />
+<meta property="place:location:latitude" content="43.588331" />
+<meta property="place:location:longitude" content="-116.214" />
+<meta itemprop="thumbnailUrl" content="/images/radiator-replacement.jpg" />
+<link rel="image_src" href="/images/radiator-replacement.jpg" />
+<meta itemprop="image" content="/images/radiator-replacement.jpg" />
+<meta name="twitter:title" content="The BEST Auto Repair Shop in Boise ID | Auto Metric" />
+<meta name="twitter:image" content="/images/radiator-replacement.jpg" />
+<meta name="twitter:url" content="https://boiseautometric.com" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description"
+    content="Call Today:(208) 338-8483.  Auto Metric is the BEST auto Repair shop in Boise for foreign and domestic cars.  ASE Certified Mechanics. Great with people too!" />
+}
+@section Schema
+{
+<script type="application/ld+json">
+        [{
+                "@@context": "https://schema.org",
+                "@@type": "AutomotiveBusiness",
+                "name": "Auto Metric",
+                "image": "https://boiseautometric.com/images/auto-metric-logo.png",
+                "@@id": "https://boiseautometric.com/",
+                "url": "https://boiseautometric.com/",
+                "telephone": "+1 2083388483",
+                "priceRange": "$$$",
+                "address": {
+                    "@@type": "PostalAddress",
+                    "streetAddress": "1703 S Vista Ave",
+                    "addressLocality": "Boise",
+                    "addressRegion": "ID",
+                    "postalCode": "83705",
+                    "addressCountry": "US"
+                },
+                "aggregateRating": {
+                    "@@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "327"
+                },
+                "geo": {
+                    "@@type": "GeoCoordinates",
+                    "latitude": 43.5883282,
+                    "longitude": -116.2140239
+                },
+                "openingHoursSpecification": {
+                    "@@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "17:30",
+                    "hasMap": {
+                        "@@type": "Map",
+                        "url": "https://goo.gl/maps/DrPgG574uKo"
+                    }
+                },
+                "contactPoint": {
+                    "@@type": "ContactPoint",
+                    "telephone": "+1 2083388483",
+                    "contactType": "customer service",
+                    "areaServed": "US",
+                    "availableLanguage": ["en", "es"],
+                "sameAs": [
+                    "https://www.facebook.com/Autometric",
+                    "https://twitter.com/boiseautometric",
+                    "https://boiseautometric.com/"
+                ]
+            }
+        },
+            {
+                "@@context": "https://schema.org/",
+                "@@type": "WebSite",
+                "name": "Auto Metric",
+                "url": "https://boiseautometric.com/"
+        }]
+
+    </script>
+}
+<style>
+    @@media (max-width: 420px) {
+        iframe.report_card_widget {
+            max-width: 95%;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>
+<div id="slideshow">
+    <div class="slider">
+        <div>
+            <img srcset="/images/slideshows/mobile/vehicle-inspection.jpg 768w, /images/slideshows/medium/vehicle-inspection.jpg 1440w, /images/slideshows/main/vehicle-inspection.jpg 1920w"
+                src="/images/slideshows/mobile/vehicle-inspection.jpg" alt="Vehicle Inspection">
+        </div>
+        <div>
+            <img srcset="/images/slideshows/mobile/wrench.jpg 768w, /images/slideshows/medium/wrench.jpg 1440w, /images/slideshows/main/wrench.jpg 1920w"
+                src="/images/slideshows/mobile/wrench.jpg" alt="Wrench">
+        </div>
+    </div>
+</div>
+<div id="middle" class="background">
+    <div class="inner">
+        <div id="boxes">
+            <div>
+                <div class="wrapper">
+                    <span class="title">
+                        Maintenance
+                    </span>
+                    <span class="icon maintenance"></span>
+                    <p>
+                        Keeping up with your car maintenance is important as it keeps your car running at peak
+                        condition.
+                    </p>
+                    <a href="/vehicle-maintenance-tips">Learn More About Maintenance</a>
+                </div>
+            </div>
+            <div>
+                <div class="wrapper">
+                    <span class="title">
+                        Auto Repairs
+                    </span>
+                    <span class="icon repairs"></span>
+                    <p>
+                        We specialize in fixing a wide variety problems, helping you get back on the road faster.
+                    </p>
+                    <a asp-page="/AutoRepairs">Learn More About Auto Repairs</a>
+                </div>
+            </div>
+            <div>
+                <div class="wrapper">
+                    <span class="title">
+                        Request Appointment
+                    </span>
+                    <span class="icon appointment"></span>
+                    <p>
+                        Schedule an appointment with us to change oil, check filters, or other appointment requests.
+                    </p>
+                    <a href="/contact-us">Request an Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<main id="content" role="main">
+    <section>
+        <div class="inner">
+            <h1>The BEST Auto Repair in Boise ID | Boise Auto Metric</h1>
+            <p>
+                Joe Garza and his team at Auto Metric in Boise, Idaho wish you well during the COVID-19 Pandemic and
+                hope you are all staying safe and protecting others.
+                Our auto repair shop is open and ready to serve you and your automotive needs. Like the rest of you, we
+                are following CDC Guidelines and are totally done with 2020.
+                We can't wait until 2020 is done with us!
+            </p>
+            <h2>10 Reasons Auto Metric is the BEST Auto Repair in Boise Idaho</h2>
+            <ol>
+                <li>We have 27 years of experience fixing all makes and models - Foreign and Domestic.</li>
+                <li>Top quality ASE Certified Mechanics who give friendly service.</li>
+                <li>Boise Auto Metric keeps your car running well and prevents expensive repairs later on.</li>
+                <li>Auto Metric is concerned for your car and you! Your safety and satisfaction is a top priority.</li>
+                <li>Joe's personal workmanship guarantee. We use quality parts and provide excellent customer service.
+                </li>
+                <li>We are "Your Neighborhood Garage! We live and work in the community where we serve."</li>
+                <li>Auto Metric is the auto repair shop that serves all of the Treasure Valley. We are one of the only
+                    repair shops in Boise that will pick up your vehicle when needed.</li>
+                <li>We get your car in-and-out in timely fashion.</li>
+                <li>We love auto repair, automotive service and meeting new people!</li>
+                <li>Hablamos Español.</li>
+            </ol>
+            <blockquote style="font-style:italic;">
+                "My goal is to make sure you and your family always get to where your going, in a safe vehicle. Auto
+                Metric will treat you fairly and take care of repair and maintenance items that may turn into expensive
+                repairs if not addressed." - Joe Garza
+            </blockquote>
+            <h2>Foreign Automotive Service | Boise Auto Repair</h2>
+            <p>
+                Our auto mechanics are already well-known for our full service Volvo and Volkswagen repair. While we
+                love and specialize in Volvo and Volkswagen repair,
+                we are passionate about delighting our customers. Our foreign car expertise also extends to other
+                European brands such as BMW, Audi, Mercedes-Benz, and Porsche.
+            </p>
+            <p>
+                Our foreign automotive repair service has been recognized for timely service, quality work, and fair
+                prices. Joe Garza and his team are the affordable alternative to
+                dealer auto shops and expensive foreign auto repair shops.
+            </p>
+            <p>
+                We cover everything from oil changes to cooling systems and tune ups to complete engine rebuilds. We
+                turn frustrated drivers into happy customers.
+            </p>
+            <h2>
+                Domestic Auto Repairs | Boise Auto Metric
+            </h2>
+            <p>
+                As "Your Neighborhood Garage" we also take care of our own! Do you drive a Chevy, Ford, Chrysler, Dodge,
+                Ram, or Jeep? You can trust Auto Metric to care of your vehicle. We are honest and reliable ASE
+                Certified Master Mechanics.
+            </p>
+            <p>
+                We explain what is wrong and how we plan to fix it, We will call you if anything changes or if something
+                unexpected comes up in the process.
+            </p>
+            <p>
+                We never want to see a vehicle back in our shop a second time for the same problem, but we love seeing
+                satisfied customers coming back again for service items, regular maintenance and an occasional tune up.
+            </p>
+            <h2>
+                The BEST Auto Repair Shop in Boise, Idaho
+            </h2>
+            <p>
+                While other auto repair shops also claim to be the best, we wanted to tell you what makes us special! We
+                have a lot to brag about, but it ultimately comes down to how you feel about us! The next time you need
+                service, or a great auto-mechanic to fix a major issue, give us a call.
+            </p>
+            <p>
+                Don't take our word for it; Check our <a
+                    href="https://www.google.com/search?sxsrf=ALeKk00zh-W9T35RAOl3eTQsas5a_CWSWA%3A1597658278232&source=hp&ei=plQ6X4iHDIqs5wLp_ZfoBw&q=boise+auto+metric&oq=boise+auto+metric&gs_lcp=CgZwc3ktYWIQAzIECCMQJzIICAAQFhAKEB4yCAgAEBYQChAeMggIABAWEAoQHjoFCAAQkQI6BAgAEEM6BAguEEM6CwguELEDEMcBEKMCOg4ILhCxAxCDARDHARCjAjoKCC4QsQMQFBCHAjoHCAAQsQMQQzoHCC4QsQMQQzoFCC4QsQM6BQgAELEDOggIABCxAxCDAToCCAA6CwguEMcBEK8BEJECOgsILhCxAxDHARCvAToICC4QxwEQrwE6BggAEBYQHlD8Gli3LGC5LWgAcAB4AIABygGIAeIVkgEGMC4xNC4ymAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=0ahUKEwiI8pPx_KHrAhUK1lkKHen-BX0Q4dUDCAk&uact=5#lrd=0x54aef871c18b99f5:0x83284d2d5fbb3919,1,,,"
+                    target="_blank" rel="noopener">Google reviews</a>,
+                <a href="https://www.facebook.com/Autometric" target="_blank" rel="noopener">Facebook page</a>, and <a
+                    href="https://www.surecritic.com/reviews/auto-metric-1" target="_blank"
+                    rel="noopener">SureCritic</a>.
+                Thank you to all of our satisfied customers who say the nicest things!
+            </p>
+            <p>
+                We work hard to be the BEST Auto Repair Shop in Boise, Idaho! Being the BEST is not the same as being
+                the biggest. Take advantage of our personalized service, ASE Certified Mechanics, and fair prices. We
+                have been repairing vehicles in the Treasure Valley since 1993!
+            </p>
+        </div>
+    </section>
+</main>
+<section>
+    <div class="inner">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <script
+                    src="//static.reviewmgr.com/assets/reviews/minimalist_review_stream_parent_listener-be2ee46de1fa94818caf8a07451a5318336c759ed2e0421faebe20946ab3f87f.js"></script>
+                <iframe class="report_card_widget"
+                    style="z-index: 1000; bottom: 0px; left: 0px; width: 445px; position: fixed;" frameborder="0"
+                    src="https://www.reviewmgr.com/boise-auto-metric/bubblestream?per_page=10&last_initial=false&include_empty=false">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="box-contact-form">
+    <h4>
+        Schedule an Appointment
+    </h4>
+
+    @using (@Html.BeginForm(null, null, FormMethod.Post, new { id = "box-contact", @class = "contact" }))
+    {
+        @Html.ValidationSummary(true)
+        ;
+        <div>
+            <span class="name-title"><label for="Name">Name</label></span> <input asp-for="contactUsModel.Ndkvufdnkfj"
+            type="text" data-val-required="Name is a Required Field" />
+            <span asp-validation-for="contactUsModel.Ndkvufdnkfj"></span>
+        </div>
+        <div>
+            <span class="name-title"><label for="Email">Email</label></span> <input asp-for="contactUsModel.Kfujbmrlfjnt"
+            type="text" data-val-required="Email is a Required Field" />
+            <span asp-validation-for="contactUsModel.Kfujbmrlfjnt"></span>
+        </div>
+        <div>
+            <span class="name-title"><label for="Phone">Phone</label></span> <input asp-for="contactUsModel.jfielxicng"
+            type="text" data-val-required="Phone is a Required Field" />
+            <span asp-validation-for="contactUsModel.jfielxicng"></span>
+        </div>
+        <div>
+            <span class="name-title"><label for="Message">Message</label></span>
+            <textarea asp-for="contactUsModel.Idmvpmsdhbv"></textarea>
+        </div>
+        <span asp-validation-for="contactUsModel.Idmvpmsdhbv"></span>
+        <span>@(Html.Recaptcha<RecaptchaV3HiddenInput>(RecaptchaSettings.Value))></span>
+        <input id="recaptcha" type="submit" value="Submit">
+    }
+
+</div>
+@section Scripts {
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.slider').bxSlider({
+            useCSS: false
+        });
+    });
+</script>
+}
